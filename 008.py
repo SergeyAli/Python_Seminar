@@ -4,39 +4,20 @@
 # - x=34; y=-30 -> 4
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
-
-Console.Write("Введите значения координаты X: ");
-string userA = Console.ReadLine();
-int a = Convert.ToInt32(userA);
-Console.Write("Введите значения координаты Y: ");
-string userB = Console.ReadLine();
-int b = Convert.ToInt32(userB);
-if (a==0 ^ b==0)
-{
-    System.Console.WriteLine("Введена нулевая координата");
-}
-else
-{
-    if (a>0 & b>0)
-    {
-        System.Console.WriteLine("Координаты первой четверти");
-    }
-    else
-    {
-        if (a<0 & b>0)
-        {
-            System.Console.WriteLine("Координаты второй четверти");
-        }
-        else
-        {
-            if (a<0 & b<0)
-            {
-                System.Console.WriteLine("Координаты третьей четверти");
-            }
-            else
-            {
-                System.Console.WriteLine("Координаты четвертой четверти");
-            }
-        }
-    }
-}
+print("Введите значения координаты X: ");
+a = int(input())
+print("Введите значения координаты Y: ");
+b = int(input())
+if (a==0 ^ b==0):
+    print("Введена нулевая координата")
+else:
+    if (a>0 and b>0):
+        print("Координаты первой четверти")
+    else:
+        if (a<0 and b>0):
+            print("Координаты второй четверти")
+        else:
+            if (a<0 and b<0):
+                print("Координаты третьей четверти")
+            else:
+                print("Координаты четвертой четверти")
