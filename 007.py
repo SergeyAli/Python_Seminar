@@ -1,10 +1,22 @@
 # Проверить истинность утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат
-                                   ¬(X ⋁ Y) = ¬X ⋀ ¬Y !(X || Y)==!X && !Y
-int N=5;
-System.Console.WriteLine($"N={N}");
-bool x,y,f1,f2,f;
-x=true;
-y=true;
-f1=!(x || y);
-f2=!x && !y;
-System.Console.WriteLine($"{x} {y} {f1} {f2}");
+def inputNumbers(x):
+    xyz = ["X", "Y", "Z"]
+    a = []
+    for i in range(x):
+        a.append(input(f"Введите значение {xyz[i]}: "))
+    return a
+
+
+def checkPredicate(x):
+    left = not (x[0] or x[1] or x[2])
+    right = not x[0] and not x[1] and not x[2]
+    result = left == right
+    return result
+
+
+statement = inputNumbers(3)
+
+if checkPredicate(statement) == True:
+    print(f"Утверждение истинно")
+else:
+    print(f"Утверждение ложно")
