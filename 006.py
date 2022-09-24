@@ -2,18 +2,13 @@
 # - 6 -> да
 # - 7 -> да
 # - 1 -> нет
+print("Введите номер дня недели: ");
+d = int(input())
+weekDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 
-lint =
-Console.Write("Введите номер дня недели: ");
-string userD= Console.ReadLine();
-int d = Convert.ToInt32(userD);
-string[] weekDays = new string[] {"Понедельник" , "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
-if (d==6 ^ d==7)
-{
-    System.Console.WriteLine($"Это Выходной день {weekDays[d-1]}");
-}
-else
-{
-    System.Console.WriteLine($"Это Рабочий день {weekDays[d-1]}");
-}
+if (d==6 or d==7):
+    print(f"Это Выходной день {weekDays[d-1]}")
+else:
+    print(f"Это Рабочий день {weekDays[d-1]}")
+
 
