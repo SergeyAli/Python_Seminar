@@ -2,7 +2,7 @@
 # Используйте форматирование строк.
 
 import datetime
-sec = 3661
+sec = 5600
 minute = sec % 60
 sec1 = minute % 60
 hour = int(sec/3600)  # 1 hour
