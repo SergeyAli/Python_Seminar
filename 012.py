@@ -4,7 +4,6 @@
 print('Введите N ');
 N = int(input())
 umbers = list(range(1, N+1))
-print(umbers)  # [1, 2, 3, 4, 5]
 for i in umbers:
-    print(f"{umbers[i-1]} : {3*i+1}")
+    print(f"{umbers[i-1]} : {3*i+1}", end = ", ")
 
