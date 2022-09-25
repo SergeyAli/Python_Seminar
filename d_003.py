@@ -6,3 +6,10 @@ b = n*111
 c = n+a+b
 print(f'{n}+{a}+{b}={c}')
 
+
+# number = input('Введите целое число: ')
+# number2 = number * 2
+# number3 = number * 3
+#
+# print(f'{number} + {number2} + {number3} = {int(number) + int(number2) + int(number3)}')
+
