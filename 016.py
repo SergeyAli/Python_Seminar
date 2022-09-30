@@ -14,8 +14,8 @@
 print('Введите N ');
 N = int(input())
 sum_N = list(range(1, N+1))
-f=1
+f=0
 for i in sum_N:
-    f *= (1 + (1 / i)) ** i
+    f += (1 + (1 / i)) ** i
     print(f"{f}",  end = ", ")
 
