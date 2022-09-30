@@ -7,5 +7,5 @@ N = list(range(1, n+1))
 sum_N=0
 for i in N:
     sum_N += (1 + (1 / i)) ** i
-    print(f"{sum_N}",  end = ", ")
+    print(f"{sum_N}", end = ", ")
 

@@ -5,4 +5,9 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-print(sum([int(i) for i in str(int(input('Введите вещественноем число: ')))]))
+n = input("Введите вещественное число: ")
+suma = 0
+for digit in n:
+    if digit.isdigit():
+        suma += int(digit)
+print("Сумма:", suma)
