@@ -15,6 +15,24 @@
 
 # 2 вариан
 
+
+# print ('a = ', end = '')
+# a = int (input ())
+# print ('b = ', end = '')
+# b = int (input ())
+# p = a * b
+# while a != 0 and b != 0:
+#     if a > b:
+#         a = a % b
+#     else:
+#         b = b % a
+# nod = a + b
+# nok = p // nod
+# print ('НОК:', nok)
+# print ('НОД:', nod)
+
+
+# 3 вариан
 n = 4
 n1 = 6
 if n > n1:
