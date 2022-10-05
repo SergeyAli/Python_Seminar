@@ -2,12 +2,14 @@
 # Пример: [2, 3, 4, 5, 6] => [12, 15, 16]; [2, 3, 5, 6] => [12, 15]
 
 list = [2, 3, 4, 5, 6]
-a[]
-b[]
-# int[] b=new int[a.Length/2];
-for i in list/2:
-    b[i] = a[i]*a[a.Length-i-1];
-    i+=1
-for(i=0;i<b.Length;i++)
-    System.Console.Write($"{b[i],4}");
 
+if len(list) % 2 == 0:
+    # print('Chet')
+    for i in range(0, int(len(list) // 2)):
+        b = list[i] * list[len(list) - i - 1]
+        print(b, end=' ')
+else:
+    # print('Nechet')
+    for i in range(0, int((len(list)//2))+1):
+        b=list[i] *list[len(list)-i - 1]
+        print(b, end=' ')
