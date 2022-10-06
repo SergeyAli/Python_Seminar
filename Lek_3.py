@@ -37,22 +37,97 @@
 # f=sum  # можно переписать проще
 # sum = lambda x, y: x+y +1
 
-def mylt(x, y):
-    return x*y
+# def mylt(x, y):
+#     return x*y
+#
+# def calc(op, a, b):
+#     print(op(a, b))
+#     # return op(a, b)
+#
+# # calc(mylt, 4, 5)
+# # calc(sum, 4, 5)
+# # calc(f, 4, 5)
+# # calc(sum, 4, 5)
+# calc(lambda x, y: x+y +1, 4, 5)
 
-def calc(op, a, b):
-    print(op(a, b))
-    # return op(a, b)
+# Четные числа в диопазоне от 1 до 100
 
-# calc(mylt, 4, 5)
-# calc(sum, 4, 5)
-# calc(f, 4, 5)
-# calc(sum, 4, 5)
-calc(lambda x, y: x+y +1, 4, 5)
+# 1 Variant
+list = []
+
+# for i in range(1, 101):
+#     if(i%2 ==0):
+#         list.append(i)
+# print(list)
+
+#  2 Variant
+
+# for i in range(1, 101):
+#     # if(i%2 ==0):
+#     list.append(i)
+# print(list)
+
+#  3 Variant
+
+# list = [i for i in range(1, 21) if(i%2 ==0)]
+# print(list)
+
+# пары чисел - кортежи
+# list = [(i, i) for i in range(1, 21) if(i%2 ==0)]
+# print(list)
+
+# List Comprehension
+# def f(x):
+#     return x**3
+# list = [(i, f(i)) for i in range(1, 21) if(i%2 ==0)]
+# print(list)
 
 
+# В файле хранятся числа, нужно выбрать четные и составить список пар (число; квадрат числа). Пример:
+# 1 2 3 5 8 15 23 38
+# Получить:
+# [(2, 4), (8, 64), (38, 1444)]
 
+# list1 = [1, 2, 3, 5, 8, 15, 23, 38]
+#
+# def f(x):
+#     return x**3
+# list = [(i, f(i)) for i in list1 if(i%2 ==0)]
+# print(list)
 
+# ХРЕН ЗНАЧИТ ЧТО ТАКОЕ В ЛЕНЦИИ
+
+# path = 'file.txt'
+# f=open(path, 'r')
+# data=f.read() + ""
+# f.close()
+#
+# numbers = []
+#
+# while data !='':
+#     space_pos = data.index('')
+#     numbers.append(int(data[:space_pos]))
+#     data = data[space_pos+1]
+#
+# out = []
+# for e in numbers:
+#     if not e % 2:
+#         out.append((e,e **2))
+# print(out)
+
+# Улудшение
+def select(f, col):
+    return [f(x) for x in col]
+
+def where(f, col):
+    return [x for x in col if f(x)]
+
+data = '1 2 3 5 8 15 23 38'.split()
+
+res = select(int, data)
+res = where(lambda x: not x%2, res)
+res = select(lambda x: (x, x**2), res)
+print(res)
 
 
 
