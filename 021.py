@@ -6,3 +6,9 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
+# arr=["qwe", "asd", "zxc", "qwe", "ertqwe"]
+# b=["qwe"]
+# print(arr, b)
+# if b[0] in arr:
+#     del arr[arr.index(b[0])]  
+# print(arr.index(b[0])+1)
