@@ -116,20 +116,49 @@ list = []
 # print(out)
 
 # Улудшение
-def select(f, col):
-    return [f(x) for x in col]
+# def select(f, col):
+#     return [f(x) for x in col]
+#
+# def where(f, col):
+#     return [x for x in col if f(x)]
+#
+# data = '1 2 3 5 8 15 23 38'.split()
+#
+# res = select(int, data)
+# res = where(lambda x: not x%2, res)
+# res = select(lambda x: (x, x**2), res)
+# print(res)
 
-def where(f, col):
-    return [x for x in col if f(x)]
+# Решение с смпользованием функции map
+# ПРИ ЗАПУСКЕ ОШИБКА
+# li = [x for x in range(1,20)]
+#
+# li = list(map(lambda x:x+10, li)) # в  писке каждое число увеличиваем на 10
+#
+# print(li)
 
-data = '1 2 3 5 8 15 23 38'.split()
+# ее варианты
+# data= list(map(int,input().split())) # НЕ РАБОТАЕТ
+# print(data)
+# data = list(map(int,'1 2 3 4 5'.split()))
+# for e in data:
+#     print(e)
+# print('--')
+# for e in data:
+#     print(e)
+# Улудшение преведушей задачи используя map
 
-res = select(int, data)
-res = where(lambda x: not x%2, res)
-res = select(lambda x: (x, x**2), res)
+# def where(f, col):
+#     return [x for x in col if f(x)]
+#
+# data = '1 2 3 5 8 15 23 38'.split()
+#
+# res = map(int, data)
+# res = where(lambda x: not x%2, res)
+# res = list(map(lambda x: (x, x**2), res))
+# print(res)
+
+data = [x for x in range(10)]
+
+res = list(filter(lambda x: x%2==0, data))
 print(res)
-
-
-
-
-
