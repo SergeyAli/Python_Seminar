@@ -53,7 +53,7 @@
 # Четные числа в диопазоне от 1 до 100
 
 # 1 Variant
-list = []
+# list = []
 
 # for i in range(1, 101):
 #     if(i%2 ==0):
@@ -158,10 +158,10 @@ list = []
 # res = list(map(lambda x: (x, x**2), res))
 # print(res)
 
-data = [x for x in range(10)]
-
-res = list(filter(lambda x: x%2==0, data))
-print(res)
+# data = [x for x in range(10)]
+#
+# res = list(filter(lambda x: x%2==0, data))
+# print(res)
 
 # data = '1 2 3 5 8 15 23 38'.split()
 
