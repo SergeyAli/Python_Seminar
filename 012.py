@@ -32,12 +32,17 @@
 # print(d)
 
 # Еще вариант их семинара урок 5
-a = [3*n + 1 for n in range(10)]
-d = {}
-for idx, el in enumerate(a):
-    if idx == 0:
-        continue
-    d.update({idx: el})
+# a = [3*n + 1 for n in range(10)]
+# d = {}
+# for idx, el in enumerate(a):
+#     if idx == 0:
+#         continue
+#     d.update({idx: el})
+# print(d)
+
+# Еще вариант их семинара урок 5
+
+d = {n: 3*n+1 for n in range(1, 10)}
 print(d)
 
 
