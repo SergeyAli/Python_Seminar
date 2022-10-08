@@ -17,16 +17,27 @@
 
 # 3 Вариант
 
-n = int(input('N = '))
+# n = int(input('N = '))
+# d = {}
+# for i in range(1, n+1):
+#     d.setdefault(i, 3*i + 1)
+# print(d)
+#
+# # 4 Вариант
+#
+# n = int(input('N = '))
+# d = {}
+# for i in range(1, n+1):
+#     d[i] = 3*i + 1
+# print(d)
+
+# Еще вариант их семинара урок 5
+a = [3*n + 1 for n in range(10)]
 d = {}
-for i in range(1, n+1):
-    d.setdefault(i, 3*i + 1)
+for idx, el in enumerate(a):
+    if idx == 0:
+        continue
+    d.update({idx: el})
 print(d)
 
-# 4 Вариант
 
-n = int(input('N = '))
-d = {}
-for i in range(1, n+1):
-    d[i] = 3*i + 1
-print(d)
