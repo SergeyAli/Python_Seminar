@@ -12,3 +12,12 @@ while count < list_length:
     count += 2 # Счётчик крутим через одну позицию, тем самым проходимся по нечетным позициям
 
 print("Сумма всех элементов списка:", sumOfElements)
+
+
+# Другой вариан через
+
+converted_list = list(map(int, input().split()))
+filtered_list = [converted_list[x] for x in range(0, len(converted_list)+1, 2)]
+print(filtered_list)
+
+

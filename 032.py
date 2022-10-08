@@ -14,3 +14,8 @@ filtered_list = list(filter(lambda x: converted_list.count(x) == 1, converted_li
 print(filtered_list)
 
 
+# еще вариант
+converted_list = list(map(int, input().split()))
+filtered_list = [x for x in converted_list if converted_list.count(x) == 1]
+print(filtered_list)
+
