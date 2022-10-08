@@ -10,3 +10,15 @@ print(fib1, fib2, end=' ')
 for i in range(2, n):
     fib1, fib2 = fib2, fib1 + fib2
     print(fib2, end=' ')
+
+
+
+# НЕОФИБОНАЧИ
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     if n < 0:
+#         return fib(-n) * (-1) ** (-n+1)
+#     else:
+#         return fib(n-1) + fib(n-2)
+# Развернуть в список
