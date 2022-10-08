@@ -7,7 +7,6 @@ list_number = data.readline()
 data.close()
 list_number = list(map(int, list_number.split()))
 print(list_number)
-
 for i in range(1, len(list_number)):
     if not list_number[i] -1 == list_number[i-1]:
         print(f" {list_number[i] -1}")
