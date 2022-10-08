@@ -12,3 +12,16 @@ print(f'Текст до обработки:\n{text}')
 print(f'\nУдалаяем из текста слова содержащие: \'{search_text}\'\n')
 lst = (" ".join([el for el in text.split() if search_text not in el]))
 print(f'Текст после обработки:\n{lst}\n\n')
+
+
+# Вариани filter
+
+my_text = 'Напишите абв напиабв програбвмму программу, удаляющую из этого абв текста все вабвс слова, содерабващие содержащие "абв"'
+
+def del_some_words(my_text):
+    my_text = list(filter(lambda x: 'абв' not in x, my_text.split()))
+    print(my_text)
+    return " ".join(my_text)
+
+my_text = del_some_words(my_text)
+print(my_text)
