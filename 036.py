@@ -2,10 +2,15 @@
 # Пример: [1, 5, 2, 3, 4, 6, 1, 7] => [1, 2, 3] или [1, 7] или [1, 6, 7] и т.д. Порядок элементов менять нельзя
 
 
-a=[5,1,6,7,11]
-flag = True
-i = 0
-while flag and i != len(a) -1:
-    flag =  a[i]  < a[i+1]
-    i += 1
-print(flag)
+list01 = [1, 5, 2, 3, 4, 6, 1, 7]
+list01 = list(map(int, list01))
+
+list02 = []
+
+list02.append(min(list01))
+#k = 0
+for i in range(len(list01)):
+    if list02[-1] < list01[i]:
+        #k += 1
+        list02.append(list01[i])
+print(list02)
