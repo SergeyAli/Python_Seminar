@@ -8,7 +8,7 @@
 #
 # b) Подумайте как наделить бота ""интеллектом""
 
-# man vs smart bot
+# человек против бота c "интеллектом"
 
 from random import randint, choice
 
