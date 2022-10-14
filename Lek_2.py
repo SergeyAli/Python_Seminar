@@ -1,7 +1,7 @@
 # Записывать данные в файл
 # with open('file.txt', 'a') as data: #
-#    data.write('line 1\n')
-#    data.write('line 2\n')
+#     data.write('line 1\n')
+#     data.write('line 2\n')
 
 # colors = ['red', 'green', 'blue'] # список с данными
 # data = open('file.txt', 'w') # созаем текстовую еременную data и связаваем ее с текстовым файлом file.txt, указваем мод а - дозапись w- запись r - чтение
