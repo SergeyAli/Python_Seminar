@@ -35,5 +35,5 @@ def change_polynomial(pol, k, rat, ind):
 new_pol = change_polynomial(pol, k, ratios, indexes)
 print(new_pol)
 
-with open('pol_uncorr33.txt', 'w') as data:
+with open('SU_6_2_pol_uncorr.txt', 'w') as data:
     data.write(pol_new)
