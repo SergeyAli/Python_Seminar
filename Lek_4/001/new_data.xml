@@ -1,6 +1,6 @@
 <xml>
-    <temperature units = "f">23.0</temperature/p>
-    <wind_speed_view units = "m/c">10 <wind_speed_view>
-    <pressure units = "mmHg">743<pressure>
+    <temperature units = "f">24.8</temperature/p>
+    <wind_speed_view units = "m/c">22 <wind_speed_view>
+    <pressure units = "mmHg">740<pressure>
    </body>
 ,html>
