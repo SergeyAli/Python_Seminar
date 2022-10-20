@@ -12,4 +12,6 @@ print("The content of the file is:\n", data)
 index = data.index
 
 for i in index:
-    print(i)
+    a = 'Ольга'
+    if (data == a):
+        print(data)
