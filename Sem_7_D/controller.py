@@ -1,5 +1,3 @@
-# звено связывающие файлы
-
 import UI
 import user_answer
 

@@ -1,5 +1,3 @@
-# Юзер-интерфейс, то что будет видеть пользователь, его взаимодействие с программой
-
 def print_data(data):
     print(data)
 
@@ -10,10 +8,10 @@ def input_data(data):
 
 def input_phonebook():
     phone = check_phone()
-    surname = check_full_name("Фамилия: ")
-    name = check_full_name("Имя: ")
-    patronymic = check_full_name("Отчество: ")
-    return f"Номер телефона: +7 {phone} Фамилия: {surname} Имя: {name} Отчество: {patronymic}"
+    surname = check_full_name("surname: ")
+    name = check_full_name("name: ")
+    patronymic = check_full_name("patronymic: ")
+    return f"phone: +7 {phone} surname: {surname} name: {name} patronymic: {patronymic}"
 
 
 def check_full_name(text):
@@ -30,7 +28,7 @@ def check_full_name(text):
 def check_phone():
     flag = False
     while flag == False:
-        phone = input("Номер телефона: +7 ").replace(' ', '')
+        phone = input("phone: +7 ").replace(' ', '')
         if phone.isdigit() and len(phone) == 10:
             flag = True
             return phone
@@ -41,7 +39,7 @@ def check_phone():
 def check_phone_search():
     flag = False
     while flag == False:
-        phone = input("Номер телефона: +7 ").replace(' ', '')
+        phone = input("phone: +7 ").replace(' ', '')
         if phone.isdigit():
             flag = True
             return phone
