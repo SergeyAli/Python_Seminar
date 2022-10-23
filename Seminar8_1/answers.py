@@ -1,0 +1,52 @@
+from in_out import *
+from logger import *
+from ui import *
+
+def print_all():
+    list_data = get_info("PI.csv")
+    list_data += get_info("Salary.csv")
+    list_data += get_info("Department.csv")
+    for i in list_data:
+        print(i)
+    info_logger(f'Запрос на вывод информации')
+
+
+def add_data():
+    id_pes = input_data("Введите id: ")
+    list_data = get_info("PI.csv")
+    count = 0
+    for i in list_data:
+        if f"ID {id_pes}" in i:
+            print("Введеный id уже существует")
+            info_logger(f'Введеный id уже существует')
+            count += 1
+            break
+    if count == 0:
+        data_personal = add_data_pi(id_pes)
+        append_data("PI.csv", data_personal)
+        info_logger(f'Новая запись в таблицу "PI" {data_personal}')
+
+        data_personal = add_data_Salary(id_pes)
+        append_data("Salary.csv", data_personal)
+        info_logger(f'Новая запись в таблицу "Salary" {data_personal}')
+
+        data_personal = add_data_Department(id_pes)
+        append_data("Department.csv", data_personal)
+        info_logger(f'Новая запись в таблицу "Department" {data_personal}')
+
+        print_data("\nДанные успешно добавлены.")
+
+def search_data():
+    id_pes = input("Введите id: ")
+    info_logger(f'Запрос на поиск по ID {id_pes}')
+
+    list_data = get_info("PI.csv")
+    list_data += get_info("Salary.csv")
+    list_data += get_info("Department.csv")
+    count = 0
+    for i in list_data:
+        if f"ID {id_pes}" in i:
+            print(i)
+            count += 1
+    if count == 0:
+        print("Информация не найдена")
