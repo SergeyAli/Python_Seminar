@@ -1,14 +1,28 @@
 import requests
 
-url = "https://api.apilayer.com/currency_data/change?start_date={start_date}&end_date={end_date}"
+url = f"https://api.apilayer.com/fixer/convert?to={to}&from={from}&amount={amount}"
 
 payload = {}
-headers= {"apikey": "E8EOH0EStKYKLHTYh0K5SqoRu2YEbdLN"}
+headers= {
+"apikey": "E8EOH0EStKYKLHTYh0K5SqoRu2YEbdLN"
+}
 
 response = requests.request("GET", url, headers=headers, data = payload)
 
 status_code = response.status_code
 result = response.text
+
+
+
+# url = f"https://api.apilayer.com/currency_data/change?start_date={start_date}&end_date={end_date}"
+#
+# payload = {}
+# headers= {"apikey": "E8EOH0EStKYKLHTYh0K5SqoRu2YEbdLN"}
+#
+# response = requests.request("GET", url, headers=headers, data = payload)
+#
+# status_code = response.status_code
+# result = response.text
 
 
 # {
@@ -38,3 +52,4 @@ result = response.text
 #   "start_date": "2005-01-01",
 #   "success": true
 # }
+
