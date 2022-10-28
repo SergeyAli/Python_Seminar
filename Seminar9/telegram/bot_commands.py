@@ -16,7 +16,7 @@ async def time_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     log(update, context)
-    await update.message.reply_text(f'/hi\n/time\n/help\n/sum')
+    await update.message.reply_text(f'/hi\n/time\n/help\n/sum\n/sub\n/mult\n/div')
 
 
 async def sum_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -26,3 +26,27 @@ async def sum_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     items = user_text.split()
     x, y = int(items[1]), int(items[2])
     await update.message.reply_text(f'{x} + {y} = {x + y}')
+
+async def sub_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    log(update, context)
+    user_text = update.message.text
+    print(user_text)
+    items = user_text.split()
+    x, y = int(items[1]), int(items[2])
+    await update.message.reply_text(f'{x} - {y} = {x - y}')
+
+async def mult_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    log(update, context)
+    user_text = update.message.text
+    print(user_text)
+    items = user_text.split()
+    x, y = int(items[1]), int(items[2])
+    await update.message.reply_text(f'{x} * {y} = {x * y}')
+
+async def div_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    log(update, context)
+    user_text = update.message.text
+    print(user_text)
+    items = user_text.split()
+    x, y = int(items[1]), int(items[2])
+    await update.message.reply_text(f'{x} / {y} = {x / y}')

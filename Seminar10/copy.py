@@ -1,5 +1,7 @@
 import requests
 
+
+
 url = f"https://api.apilayer.com/fixer/convert?to={to}&from={from}&amount={amount}"
 
 payload = {}
@@ -11,6 +13,18 @@ response = requests.request("GET", url, headers=headers, data = payload)
 
 status_code = response.status_code
 result = response.text
+
+
+
+
+
+# for i in stroka:
+# if i in d.keys():
+# print(d[i], end='')
+# dict.get(key[, default]) - возвращает значение ключа, но если его нет, не бросает исключение, а возвращает default (по умолчанию None).
+#
+# dict.items() - возвращает пары (ключ, значение).
+
 
 
 
